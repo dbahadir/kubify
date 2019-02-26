@@ -33,6 +33,7 @@ data "template_file" "cloud_conf" {
     os_domain_key = "${local.mapping[module.os.domain_key]}"
     os_tenant_value = "${module.os.tenant_value}"
     os_domain_value = "${module.os.domain_value}"
+    os_region = "${module.os.region}"
     fip_subnet_id = "${data.openstack_networking_network_v2.fip.id}"
     lb_subnet_id = "${openstack_networking_subnet_v2.cluster.id}"
     lb_provider = "${module.os.lbaas_provider}"
